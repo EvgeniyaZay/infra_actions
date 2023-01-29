@@ -2,7 +2,14 @@
 
 # Тут ваши задачи тестирования и сборки образа
 # ...
-# Сразу после них добавьте новую задачу: деплой приложения
+# Сразу после них добавьте новую задачу: деплой приложения.
+name: Django-app workflow
+on: [push]
+
+jobs:
+  tests:
+    # «Раннер» — создание изолированного окружения с последней версией Ubuntu
+    runs-on: ubuntu-latest
 build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
